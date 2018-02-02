@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Hawaii Missile Alert</string>
+    <string name="about">About</string>
+    <string name="alerts">Alerts</string>
+    <string name="warnings">Warnings</string>
+    <string name="tests">Tests</string>
 </resources>
