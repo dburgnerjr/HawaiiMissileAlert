@@ -1,66 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.danielburgnerjr.hawaiimissilealert.MainActivity">
+    tools:context="com.danielburgnerjr.hawaiimissilealert.AlertsActivity">
 
     <TextView
-        android:id="@+id/txtHeader"
+        android:id="@+id/txtAlerts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
+        android:text="@string/alerts"
         android:textSize="24sp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
         android:textAlignment="center"/>
 
     <Button
-        android:id="@+id/btnAbout"
+        android:id="@+id/btnAmberAlertKauai"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
         android:textColor="@color/buttonText"
-        android:layout_below="@+id/txtHeader"
+        android:layout_below="@+id/txtAlerts"
         android:layout_margin="10dp"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:layout_centerHorizontal="true"
-        android:text="@string/about" />
+        android:text="@string/amber_alert_kauai" />
 
     <Button
-        android:id="@+id/btnAlerts"
+        android:id="@+id/btnAmberAlertState"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
         android:textColor="@color/buttonText"
-        android:layout_below="@id/btnAbout"
+        android:layout_below="@id/btnAmberAlertKauai"
         android:layout_margin="10dp"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:layout_centerHorizontal="true"
-        android:text="@string/alerts" />
+        android:text="@string/amber_alert_state" />
 
     <Button
-        android:id="@+id/btnWarnings"
+        android:id="@+id/btnPACOMAlertState"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
         android:textColor="@color/buttonText"
-        android:layout_below="@id/btnAlerts"
+        android:layout_below="@id/btnAmberAlertState"
         android:layout_margin="10dp"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:layout_centerHorizontal="true"
-        android:text="@string/warnings" />
+        android:text="@string/pacom_alert_state" />
 
     <Button
-        android:id="@+id/btnTests"
+        android:id="@+id/btnBMDFalseAlarm"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
-        android:textSize="20sp"
-        android:layout_below="@id/btnWarnings"
+        android:textSize="18sp"
+        android:layout_below="@id/btnPACOMAlertState"
         android:background="@color/colorPrimary"
-        android:text="@string/tests"
-        android:textColor="@color/buttonText" />
-
+        android:text="@string/bmd_false_alarm"
+        android:textColor="@color/buttonText"
+        android:visibility="gone" />
 </android.widget.RelativeLayout>

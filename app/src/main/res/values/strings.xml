@@ -4,4 +4,16 @@
     <string name="alerts">Alerts</string>
     <string name="warnings">Warnings</string>
     <string name="tests">Tests</string>
+
+    <string name="what_is_it">About Hawaii Missile Alert</string>
+    <string name="description">On January 13, 2018, an Hawaii Emergency Management Agency
+                                employee sent out a missile alert in error.  It took 38
+                                minutes to cancel the alert.  The root cause was poor UI
+                                design.  This app is a proposed redesign of the UI for the
+                                Hawaii Emergency Management Agency.</string>
+
+    <string name="amber_alert_kauai">Amber Alert (CAE) - Kauai County Only</string>
+    <string name="amber_alert_state">Amber Alert (CAE) - Statewide</string>
+    <string name="pacom_alert_state">PACOM Alert (CDW) - State Only</string>
+    <string name="bmd_false_alarm">BMD False Alarm</string>
 </resources>
