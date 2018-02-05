@@ -72,17 +72,20 @@ public class AlertsActivity extends AppCompatActivity {
             AlertDialog adAlertBox = new AlertDialog.Builder(this)
                     .setMessage("Amber Alert! Missing child reported in Kauai County." +
                                 "License Plate ABC 123")
+                    .setPositiveButton("OK", null)
                     .show();
         }
         if (strButton.equals("amber_alert_state")) {
             AlertDialog adAlertBox = new AlertDialog.Builder(this)
                     .setMessage("Amber Alert! Missing child reported could be anywhere" +
                             " in the state.  License Plate ABC 123")
+                    .setPositiveButton("OK", null)
                     .show();
         }
         if (strButton.equals("pacom_alert_state")) {
             AlertDialog adAlertBox = new AlertDialog.Builder(this)
                     .setMessage("Missile Alert! Missiles inbound, seek shelter immediately.")
+                    .setPositiveButton("OK", null)
                     .show();
             btnBMDFalseAlarm.setVisibility(View.VISIBLE);
         }
@@ -90,6 +93,7 @@ public class AlertsActivity extends AppCompatActivity {
         if (strButton.equals("bmd_false_alarm")) {
             AlertDialog adAlertBox = new AlertDialog.Builder(this)
                     .setMessage("The Missile Alert was a false alarm.")
+                    .setPositiveButton("OK", null)
                     .show();
             btnBMDFalseAlarm.setVisibility(View.GONE);
         }

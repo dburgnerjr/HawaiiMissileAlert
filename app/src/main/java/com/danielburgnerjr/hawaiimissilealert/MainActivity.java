@@ -31,5 +31,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intA);
             }
         });
+
+        final Button btnWarnings = (Button) findViewById(R.id.btnWarnings);
+        btnWarnings.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intA = new Intent(MainActivity.this, WarningsActivity.class);
+                startActivity(intA);
+            }
+        });
+
+        final Button btnTests = (Button) findViewById(R.id.btnTests);
+        btnTests.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intA = new Intent(MainActivity.this, TestsActivity.class);
+                startActivity(intA);
+            }
+        });
     }
 }
