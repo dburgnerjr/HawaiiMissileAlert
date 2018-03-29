@@ -22,4 +22,5 @@
     <string name="test_message">1. Test Message</string>
     <string name="pacom_alert_drill">DRILL - PACOM (CDW) - State Only</string>
     <string name="amber_alert_demo">Amber Alert Demo Test</string>
+    <string name="banner_ad_unit_id">ca-app-pub-8379108590476103/4058316047</string>
 </resources>

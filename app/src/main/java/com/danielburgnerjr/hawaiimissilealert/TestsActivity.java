@@ -1,12 +1,13 @@
 package com.danielburgnerjr.hawaiimissilealert;
 
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import com.google.android.gms.ads.MobileAds;
 
-public class TestsActivity extends AppCompatActivity {
+public class TestsActivity extends Activity {
     Button btnTestMessage;
     Button btnPACOMDrillState;
     Button btnAmberAlertDemo;
@@ -15,6 +16,8 @@ public class TestsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tests);
+
+        MobileAds.initialize(this, "ca-app-pub-8379108590476103~9902912939");
 
         btnTestMessage = (Button) findViewById(R.id.btnTestMessage);
         btnTestMessage.setOnClickListener(new View.OnClickListener() {

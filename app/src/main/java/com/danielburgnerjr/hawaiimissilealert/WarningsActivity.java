@@ -1,12 +1,13 @@
 package com.danielburgnerjr.hawaiimissilealert;
 
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import com.google.android.gms.ads.MobileAds;
 
-public class WarningsActivity extends AppCompatActivity {
+public class WarningsActivity extends Activity {
     Button btnTsunamiWarning;
     Button btnHighSurfWarning;
     Button btnLandslideHanaRoad;
@@ -15,6 +16,8 @@ public class WarningsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_warnings);
+
+        MobileAds.initialize(this, "ca-app-pub-8379108590476103~9902912939");
 
         btnTsunamiWarning = (Button) findViewById(R.id.btnTsunamiWarning);
         btnTsunamiWarning.setOnClickListener(new View.OnClickListener() {

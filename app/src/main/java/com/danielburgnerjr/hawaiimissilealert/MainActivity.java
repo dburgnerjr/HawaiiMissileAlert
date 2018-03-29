@@ -1,12 +1,14 @@
 package com.danielburgnerjr.hawaiimissilealert;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import com.google.android.gms.ads.MobileAds;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends Activity {
 
     String strPackName;
 
@@ -15,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         strPackName = getApplicationContext().getPackageName();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MobileAds.initialize(this, "ca-app-pub-8379108590476103~9902912939");
 
         final Button btnAbout = (Button) findViewById(R.id.btnAbout);
         btnAbout.setOnClickListener(new View.OnClickListener() {
