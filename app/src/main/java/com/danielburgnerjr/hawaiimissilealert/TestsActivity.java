@@ -11,13 +11,14 @@ public class TestsActivity extends Activity {
     Button btnTestMessage;
     Button btnPACOMDrillState;
     Button btnAmberAlertDemo;
+    Button btnVolcanicActivityTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tests);
 
-        MobileAds.initialize(this, "ca-app-pub-8379108590476103~9902912939");
+        MobileAds.initialize(this, String.valueOf(R.string.admob_app_id));
 
         btnTestMessage = (Button) findViewById(R.id.btnTestMessage);
         btnTestMessage.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +40,14 @@ public class TestsActivity extends Activity {
                 displayMessage("amber_alert_demo");
             }
         });
+
+        btnVolcanicActivityTest = (Button) findViewById(R.id.btnVolcanicActvityDrill);
+        btnVolcanicActivityTest.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                displayMessage("volcanic_activity_test");
+            }
+        });
+
     }
 
     protected void displayMessage(String strButton) {
@@ -60,6 +69,13 @@ public class TestsActivity extends Activity {
             AlertDialog adAlertBox = new AlertDialog.Builder(this)
                     .setMessage("This is a drill. Amber Alert! Missing child reported in " +
                             "Maui County. License Plate ABC 123")
+                    .setPositiveButton("OK", null)
+                    .show();
+        }
+        if (strButton.equals("volcanic_activity_test")) {
+            AlertDialog adAlertBox = new AlertDialog.Builder(this)
+                    .setMessage("This is a drill. Volcanic eruption reported in Hawaii " +
+                            "County. Please proceed with evacuation of the immediate area.")
                     .setPositiveButton("OK", null)
                     .show();
         }

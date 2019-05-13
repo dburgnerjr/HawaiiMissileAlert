@@ -1,26 +1,30 @@
 <resources>
-    <string name="app_name">Hawaii Missile Alert</string>
+    <string name="app_name">Hawaii EMA Demo</string>
     <string name="about">About</string>
     <string name="alerts">Alerts</string>
     <string name="warnings">Warnings</string>
     <string name="tests">Tests</string>
 
-    <string name="what_is_it">About Hawaii Missile Alert</string>
+    <string name="what_is_it">About Hawaii EMA Demo</string>
     <string name="description">On January 13, 2018, an Hawaii Emergency Management Agency
                                 employee sent out a missile alert in error.  It took 38
                                 minutes to cancel the alert.  The root cause was poor UI
                                 design.  This app is a proposed redesign of the UI for the
-                                Hawaii Emergency Management Agency.</string>
+                                Hawaii Emergency Management Agency.  Since then, a button
+                                was included to alert/test for volcanic activity.</string>
 
     <string name="amber_alert_kauai">Amber Alert (CAE) - Kauai County Only</string>
     <string name="amber_alert_state">Amber Alert (CAE) - Statewide</string>
     <string name="pacom_alert_state">PACOM Alert (CDW) - State Only</string>
     <string name="bmd_false_alarm">BMD False Alarm</string>
     <string name="tsunami_warning">Tsunami Warning (CEM) - State Only</string>
+    <string name="volcanic_activity_alert">Volcanic Activity Alert</string>
+    <string name="volcanic_activity_test">Volcanic Activity Test</string>
     <string name="high_surf_warning">High Surf Warning North Shores</string>
     <string name="landslide_hana_road">Landslide - Hana Road Closure</string>
     <string name="test_message">1. Test Message</string>
     <string name="pacom_alert_drill">DRILL - PACOM (CDW) - State Only</string>
     <string name="amber_alert_demo">Amber Alert Demo Test</string>
     <string name="banner_ad_unit_id">ca-app-pub-8379108590476103/4058316047</string>
+    <string name="admob_app_id">ca-app-pub-8379108590476103~9902912939</string>
 </resources>

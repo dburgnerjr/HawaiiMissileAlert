@@ -54,13 +54,25 @@
         android:text="@string/pacom_alert_state" />
 
     <Button
+        android:id="@+id/btnVolcanicActivityAlert"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/buttonText"
+        android:layout_below="@id/btnPACOMAlertState"
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/volcanic_activity_alert" />
+
+    <Button
         android:id="@+id/btnBMDFalseAlarm"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
         android:textSize="18sp"
-        android:layout_below="@id/btnPACOMAlertState"
+        android:layout_below="@id/btnVolcanicActivityAlert"
         android:background="@color/colorPrimary"
         android:text="@string/bmd_false_alarm"
         android:textColor="@color/buttonText"

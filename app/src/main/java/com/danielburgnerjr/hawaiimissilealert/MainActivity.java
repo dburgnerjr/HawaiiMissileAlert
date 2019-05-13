@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MobileAds.initialize(this, "ca-app-pub-8379108590476103~9902912939");
+        MobileAds.initialize(this, String.valueOf(R.string.admob_app_id));
 
         final Button btnAbout = (Button) findViewById(R.id.btnAbout);
         btnAbout.setOnClickListener(new View.OnClickListener() {

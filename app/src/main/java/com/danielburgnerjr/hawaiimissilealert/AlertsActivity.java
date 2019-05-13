@@ -1,7 +1,6 @@
 package com.danielburgnerjr.hawaiimissilealert;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.app.Activity;
 import android.os.Bundle;
@@ -13,6 +12,7 @@ public class AlertsActivity extends Activity {
     Button btnAmberAlertKauai;
     Button btnAmberAlertState;
     Button btnPACOMAlertState;
+    Button btnVolcanicActivityAlert;
     Button btnBMDFalseAlarm;
 
     @Override
@@ -20,7 +20,7 @@ public class AlertsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alerts);
 
-        MobileAds.initialize(this, "ca-app-pub-8379108590476103~9902912939");
+        MobileAds.initialize(this, String.valueOf(R.string.admob_app_id));
 
         btnAmberAlertKauai = (Button) findViewById(R.id.btnAmberAlertKauai);
         btnAmberAlertKauai.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +40,13 @@ public class AlertsActivity extends Activity {
         btnPACOMAlertState.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 getConfirmation("pacom_alert_state");
+            }
+        });
+
+        btnVolcanicActivityAlert = (Button) findViewById(R.id.btnVolcanicActivityAlert);
+        btnVolcanicActivityAlert.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                getConfirmation("volcanic_activity_alert");
             }
         });
 
@@ -91,6 +98,14 @@ public class AlertsActivity extends Activity {
                     .setPositiveButton("OK", null)
                     .show();
             btnBMDFalseAlarm.setVisibility(View.VISIBLE);
+        }
+
+        if (strButton.equals("volcanic_activity_alert")) {
+            AlertDialog adAlertBox = new AlertDialog.Builder(this)
+                    .setMessage("Volcanic eruption reported in Hawaii County. " +
+                            "Please proceed with evacuation of the immediate area.")
+                    .setPositiveButton("OK", null)
+                    .show();
         }
 
         if (strButton.equals("bmd_false_alarm")) {

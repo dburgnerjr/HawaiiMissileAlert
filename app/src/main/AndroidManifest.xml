@@ -20,6 +20,9 @@
         <activity android:name=".AlertsActivity" />
         <activity android:name=".WarningsActivity" />
         <activity android:name=".TestsActivity"></activity>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id"/>
     </application>
 
 </manifest>

@@ -17,7 +17,7 @@ public class WarningsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_warnings);
 
-        MobileAds.initialize(this, "ca-app-pub-8379108590476103~9902912939");
+        MobileAds.initialize(this, String.valueOf(R.string.admob_app_id));
 
         btnTsunamiWarning = (Button) findViewById(R.id.btnTsunamiWarning);
         btnTsunamiWarning.setOnClickListener(new View.OnClickListener() {
