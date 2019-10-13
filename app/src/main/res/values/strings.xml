@@ -26,5 +26,6 @@
     <string name="pacom_alert_drill">DRILL - PACOM (CDW) - State Only</string>
     <string name="amber_alert_demo">Amber Alert Demo Test</string>
     <string name="banner_ad_unit_id">ca-app-pub-8379108590476103/4058316047</string>
+    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
     <string name="admob_app_id">ca-app-pub-8379108590476103~9902912939</string>
 </resources>
