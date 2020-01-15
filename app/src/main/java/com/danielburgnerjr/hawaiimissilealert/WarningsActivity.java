@@ -48,25 +48,28 @@ public class WarningsActivity extends Activity {
     }
 
     protected void displayMessage(String strButton) {
-        if (strButton.equals("tsunami_warning")) {
-            AlertDialog adAlertBox = new AlertDialog.Builder(this)
-                    .setMessage("Tsunami inbound, seek shelter immediately.")
-                    .setPositiveButton("OK", null)
-                    .show();
-        }
-        if (strButton.equals("high_surf_warning")) {
-            AlertDialog adAlertBox = new AlertDialog.Builder(this)
-                    .setMessage("High surf warning in effect, all beaches affected are " +
-                            "closed until further notice.")
-                    .setPositiveButton("OK", null)
-                    .show();
-        }
-        if (strButton.equals("landslide_hana_road")) {
-            AlertDialog adAlertBox = new AlertDialog.Builder(this)
-                    .setMessage("Landslide reported on Hana Road.  Hana Road is closed " +
-                            "until further notice.")
-                    .setPositiveButton("OK", null)
-                    .show();
+        AlertDialog adAlertBox;
+        switch (strButton) {
+            case "tsunami_warning":
+                adAlertBox = new AlertDialog.Builder(this)
+                        .setMessage("Tsunami inbound, seek shelter immediately.")
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case "high_surf_warning":
+                adAlertBox = new AlertDialog.Builder(this)
+                        .setMessage("High surf warning in effect, all beaches affected are " +
+                                "closed until further notice.")
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case "landslide_hana_road":
+                adAlertBox = new AlertDialog.Builder(this)
+                        .setMessage("Landslide reported on Hana Road.  Hana Road is closed " +
+                                "until further notice.")
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
         }
     }
 }

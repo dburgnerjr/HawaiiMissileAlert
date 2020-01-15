@@ -57,33 +57,36 @@ public class TestsActivity extends Activity {
     }
 
     protected void displayMessage(String strButton) {
-        if (strButton.equals("test_message")) {
-            AlertDialog adAlertBox = new AlertDialog.Builder(this)
-                    .setMessage("This is a test of the Hawaii Emergency Alert System. " +
-                            "This is only a test.")
-                    .setPositiveButton("OK", null)
-                    .show();
-        }
-        if (strButton.equals("pacom_drill_state")) {
-            AlertDialog adAlertBox = new AlertDialog.Builder(this)
-                    .setMessage("This is a drill. Missile Alert! Missiles inbound, " +
-                            "seek shelter immediately.")
-                    .setPositiveButton("OK", null)
-                    .show();
-        }
-        if (strButton.equals("amber_alert_demo")) {
-            AlertDialog adAlertBox = new AlertDialog.Builder(this)
-                    .setMessage("This is a drill. Amber Alert! Missing child reported in " +
-                            "Maui County. License Plate ABC 123")
-                    .setPositiveButton("OK", null)
-                    .show();
-        }
-        if (strButton.equals("volcanic_activity_test")) {
-            AlertDialog adAlertBox = new AlertDialog.Builder(this)
-                    .setMessage("This is a drill. Volcanic eruption reported in Hawaii " +
-                            "County. Please proceed with evacuation of the immediate area.")
-                    .setPositiveButton("OK", null)
-                    .show();
+        AlertDialog adAlertBox;
+        switch (strButton) {
+            case "test_message":
+                adAlertBox = new AlertDialog.Builder(this)
+                        .setMessage("This is a test of the Hawaii Emergency Alert System. " +
+                                "This is only a test.")
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case "pacom_drill_state":
+                adAlertBox = new AlertDialog.Builder(this)
+                        .setMessage("This is a drill. Missile Alert! Missiles inbound, " +
+                                "seek shelter immediately.")
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case "amber_alert_demo":
+                adAlertBox = new AlertDialog.Builder(this)
+                        .setMessage("This is a drill. Amber Alert! Missing child reported in " +
+                                "Maui County. License Plate ABC 123")
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case "volcanic_activity_test":
+                adAlertBox = new AlertDialog.Builder(this)
+                        .setMessage("This is a drill. Volcanic eruption reported in Hawaii " +
+                                "County. Please proceed with evacuation of the immediate area.")
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
         }
     }
 }
