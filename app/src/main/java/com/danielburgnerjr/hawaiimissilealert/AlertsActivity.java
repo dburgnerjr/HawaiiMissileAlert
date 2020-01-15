@@ -84,45 +84,44 @@ public class AlertsActivity extends Activity {
     }
 
     protected void displayMessage(String strButton) {
-        if (strButton.equals("amber_alert_kauai")) {
-            AlertDialog adAlertBox = new AlertDialog.Builder(this)
-                    .setMessage("Amber Alert! Missing child reported in Kauai County." +
+        AlertDialog adAlertBox;
+        switch (strButton) {
+            case "amber_alert_kauai":
+                adAlertBox = new AlertDialog.Builder(this)
+                        .setMessage("Amber Alert! Missing child reported in Kauai County." +
                                 "License Plate ABC 123")
-                    .setPositiveButton("OK", null)
-                    .show();
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case "amber_alert_state":
+                adAlertBox = new AlertDialog.Builder(this)
+                        .setMessage("Amber Alert! Missing child reported could be anywhere" +
+                                " in the state.  License Plate ABC 123")
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case "pacom_alert_state":
+                adAlertBox = new AlertDialog.Builder(this)
+                        .setMessage("Missile Alert! Missiles inbound, seek shelter immediately.")
+                        .setPositiveButton("OK", null)
+                        .show();
+                btnBMDFalseAlarm.setVisibility(View.VISIBLE);
+                break;
+            case "volcanic_activity_alert":
+                adAlertBox = new AlertDialog.Builder(this)
+                        .setMessage("Volcanic eruption reported in Hawaii County. " +
+                                "Please proceed with evacuation of the immediate area.")
+                        .setPositiveButton("OK", null)
+                        .show();
+                break;
+            case "bmd_false_alarm":
+                adAlertBox = new AlertDialog.Builder(this)
+                        .setMessage("The Missile Alert was a false alarm.")
+                        .setPositiveButton("OK", null)
+                        .show();
+                btnBMDFalseAlarm.setVisibility(View.GONE);
+                break;
         }
-        if (strButton.equals("amber_alert_state")) {
-            AlertDialog adAlertBox = new AlertDialog.Builder(this)
-                    .setMessage("Amber Alert! Missing child reported could be anywhere" +
-                            " in the state.  License Plate ABC 123")
-                    .setPositiveButton("OK", null)
-                    .show();
-        }
-        if (strButton.equals("pacom_alert_state")) {
-            AlertDialog adAlertBox = new AlertDialog.Builder(this)
-                    .setMessage("Missile Alert! Missiles inbound, seek shelter immediately.")
-                    .setPositiveButton("OK", null)
-                    .show();
-            btnBMDFalseAlarm.setVisibility(View.VISIBLE);
-        }
-
-        if (strButton.equals("volcanic_activity_alert")) {
-            AlertDialog adAlertBox = new AlertDialog.Builder(this)
-                    .setMessage("Volcanic eruption reported in Hawaii County. " +
-                            "Please proceed with evacuation of the immediate area.")
-                    .setPositiveButton("OK", null)
-                    .show();
-        }
-
-        if (strButton.equals("bmd_false_alarm")) {
-            AlertDialog adAlertBox = new AlertDialog.Builder(this)
-                    .setMessage("The Missile Alert was a false alarm.")
-                    .setPositiveButton("OK", null)
-                    .show();
-            btnBMDFalseAlarm.setVisibility(View.GONE);
-        }
-        //close();
-
     }
 
 }
