@@ -23,11 +23,11 @@ public class MainActivity extends Activity {
 
         MobileAds.initialize(this, String.valueOf(R.string.admob_app_id));
 
-        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
-        final Button btnAbout = (Button) findViewById(R.id.btnAbout);
+        final Button btnAbout = findViewById(R.id.btnAbout);
         btnAbout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intA = new Intent(MainActivity.this, AboutActivity.class);
@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        final Button btnAlerts = (Button) findViewById(R.id.btnAlerts);
+        final Button btnAlerts = findViewById(R.id.btnAlerts);
         btnAlerts.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intA = new Intent(MainActivity.this, AlertsActivity.class);
@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        final Button btnWarnings = (Button) findViewById(R.id.btnWarnings);
+        final Button btnWarnings = findViewById(R.id.btnWarnings);
         btnWarnings.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intA = new Intent(MainActivity.this, WarningsActivity.class);
@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        final Button btnTests = (Button) findViewById(R.id.btnTests);
+        final Button btnTests = findViewById(R.id.btnTests);
         btnTests.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intA = new Intent(MainActivity.this, TestsActivity.class);
