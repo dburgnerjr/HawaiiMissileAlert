@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/GitHub-HawaiiMissileAlert.iml" filepath="$PROJECT_DIR$/GitHub-HawaiiMissileAlert.iml" group="HawaiiMissileAlert" />
       <module fileurl="file://$PROJECT_DIR$/HawaiiMissileAlert.iml" filepath="$PROJECT_DIR$/HawaiiMissileAlert.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/HawaiiMissileAlert-app.iml" filepath="$PROJECT_DIR$/app/HawaiiMissileAlert-app.iml" group="HawaiiMissileAlert/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
